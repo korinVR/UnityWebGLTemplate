@@ -6,6 +6,7 @@
     <title>%UNITY_WEB_NAME%</title>
     <script src="%UNITY_WEBGL_LOADER_URL%"></script>
     <script>
+      UnityLoader.compatibilityCheck = function(e,t,r) { t() };
       const gameInstance = UnityLoader.instantiate("gameContainer", "%UNITY_WEBGL_BUILD_URL%");
       const onResize = () => {
         const container = document.getElementById('gameContainer');
